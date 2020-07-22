@@ -36,8 +36,8 @@ def text_reader(path):
 
     result = requests.post(url_api,
                       files = {name: file_bytes},
-                      data = {"apikey": "4dea1b139888957",
-                              "language": "eng"})
+                      data = {"apikey": "4dea1b139",
+                              "language": "eng"})   #you have to enter your own API key from OCR space
     result = result.content.decode()                      
     result = json.loads(result)
     parsed_results = result.get("ParsedResults")[0]
