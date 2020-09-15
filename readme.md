@@ -5,4 +5,9 @@ It detects the _number plate_ from the given car :car: image using **YOLO Object
 * DETECTION: using Object detection
 * EXTRACTION: OCR
 * WEB : using Flask
-
+<h2> Displaying the working </h2>
+<h3> Before </h3>
+<img src="https://github.com/rjn01/Car-Plate-Extraction/blob/master/images/before.png" alt="before image">
+</br>
+<h3> After </h3>
+<img src="https://github.com/rjn01/Car-Plate-Extraction/blob/master/images/after.png" alt="before image">
