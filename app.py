@@ -1,7 +1,11 @@
 
 from flask import Flask, render_template, redirect, request
 import main 
+<<<<<<< HEAD
 import detect
+=======
+import detection
+>>>>>>> bd98d94458f966bdc3bc2a43f3c8684737789d5e
 
 app =  Flask(__name__)
 
@@ -16,11 +20,19 @@ def hello():  # this would be shown on the url
 def submit_data():
     if request.method== 'POST':
         f = request.files["userfile"]  #for files we have to use .files
+<<<<<<< HEAD
         path = "./static/{}".format(f.filename)
         f.save(path)  #save file which is sent by user.
         
         
         path = detect.object(path)
+=======
+        #path = "./static/{}".format(f.filename)
+        f.save(f.filename)  #save file which is sent by user.
+        
+        
+        path = detection.object(f.filename)
+>>>>>>> bd98d94458f966bdc3bc2a43f3c8684737789d5e
         print(path)
         if path:
             output = main.text_reader(path)
@@ -44,4 +56,8 @@ if __name__== "__main__":
     #app.debug=True  
     #if we make any changes to code then we don't have to run the program again through terminal
     # we can also write in the run command
+<<<<<<< HEAD
     app.run(debug=True)
+=======
+    app.run(debug=True)
+>>>>>>> bd98d94458f966bdc3bc2a43f3c8684737789d5e
