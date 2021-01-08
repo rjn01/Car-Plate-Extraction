@@ -68,18 +68,7 @@ def object(user_image):
 			x,y,w,h = boxes[i]
 			label = str(classes[class_ids[i]])
 			
-			roi = img[y:y+h,x:x+w]
-
-
-			'''image_name = "image.jpg" 
-
-			#path to where the image will be saved
-			path = os.path.join('../Car-Plate_Extraction',image_name)
-
-			cv2.imwrite(path,roi)
-			
-			return(path)'''
-		
+			roi = img[y:y+h,x:x+w]		
 			cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,255),1)
 			
 			
